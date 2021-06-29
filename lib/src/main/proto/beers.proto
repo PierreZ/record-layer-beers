@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package beers;
+option java_outer_classname = "BeersProto";
+
+message Beer {
+  string id = 1;
+  string name = 2;
+  BeerCategory category = 3;
+  float abv = 4;
+}
+
+enum BeerCategory {
+  UNKNOWN = 0;
+  TRIPEL = 1;
+}
+
+message RecordTypeUnion {
+  Beer _Beer = 1;
+}
